@@ -1,0 +1,324 @@
+/* STILI GENERALI E CORPO PAGINA */
+body {
+    background-color: #FFF5E6; 
+    font-family: 'Fredoka', sans-serif;
+    color: #6b5713; 
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BARRA DI NAVIGAZIONE E MENU (ARANCIO) */
+div#navigation {
+    background-color: #E67E22; 
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #D35400; 
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* STATI DEL MENU (HOVER E LINK ATTIVO) */
+#navigation li a:hover {
+    background-color: #F39C12; 
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+#navigation li#activelink a {
+    background-color: #ffffff;
+    color: #E67E22;
+    border-bottom: 4px solid #D35400; 
+}
+
+/* TITOLI GENERALI */
+h2 {
+    color: #D35400; 
+}
+
+/* INTESTAZIONE (HEADER) E TITOLO GRANDE */
+div#header {
+    background-color: #E67E22 !important; 
+    background: linear-gradient(135deg, #e67e22, #d35400) !important; 
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+}
+
+#header h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 55px;
+    color: #ffe0b2; 
+    text-shadow: 2px 2px 5px rgba(255, 107, 107, 0.4);
+}
+
+#header h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;               
+    color: #ffe0b2;               
+    font-weight: bold;           
+    margin-top: -10px;           
+    opacity: 0.9;                 
+    text-transform: italic;       
+    letter-spacing: 1px;          
+}
+
+section h2 {
+    color: #CC6633;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#header p {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* LOGO E TESTO NELL'HEADER */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 40px;               
+    padding: 20px;
+}
+
+.header-logo {
+    width: 160px;            
+    height: auto;
+    order: 2;                
+    filter: drop-shadow(5px 5px 10px rgba(160, 64, 0, 0.4));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);   
+    filter: drop-shadow(8px 8px 15px rgba(160, 64, 0, 0.6));
+}
+
+.header-text {
+    order: 1;                
+}
+
+/* INDICE DELLA PAGINA (NUVOLETTA ARANCIO) */
+.page-index {
+    background-color: #FFF3E0;    
+    border: 3px dashed #E67E22;   
+    padding: 25px;
+    margin: 30px auto;
+    width: 65%;
+    border-radius: 50px;          
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(211, 84, 0, 0.15); 
+}
+
+.page-index h3 {
+    color: #D35400;               
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.page-index ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.page-index li a {
+    text-decoration: none;
+    color: #D35400;               
+    font-weight: bold;
+    padding: 8px 18px;
+    border: 2px solid #F39C12;    
+    border-radius: 25px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.page-index li a:hover {
+    background-color: #F39C12;    
+    color: white;                 
+    transform: scale(1.05);
+}
+
+/* SEZIONI DI CONTENUTO PRINCIPALE */
+section {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 40px;
+    border: 2px solid #FFE0B2;    
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #D35400;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* IMMAGINI ANIMALI */
+.animal-img {
+    display: block;
+    margin-left: auto;      
+    margin-right: auto;     
+    width: 600px;           
+    height: auto;
+    border: 8px solid #fff0f5;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.3);
+}
+
+/* STRUTTURA CONTENUTI E SFONDO DECORATIVO */
+#content {
+    position: relative;
+    overflow: hidden; 
+}
+
+#content::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../immagini/hmp.png'); 
+    background-size: 100px; 
+    background-repeat: repeat; 
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none; 
+}
+
+#content section {
+    position: relative;
+    z-index: 1;
+}
+
+#content section a {
+    color: #E67E22;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#content section a:hover {
+    text-decoration: underline;
+}
+
+/* EFFETTO FLIP CARD (CARTA CHE RUOTA) */
+.flip-card {
+  background-color: transparent;
+  width: 350px;  
+  height: 350px; 
+  perspective: 1000px; /*Definisce la profondità 3D. Più è basso il numero, più l'effetto è estremo */
+  margin: 20px auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #D35400; 
+}
+
+.flip-card-front {
+  background-color: #bbb;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 20px;
+}
+
+.flip-card-back {
+  background-color: #E67E22; 
+  color: white;
+  transform: rotateY(180deg); 
+  padding: 20px;
+}
+
+.flip-card-back h3 {
+  margin-top: 0;
+  color: #5D4037;
+}
+
+.flip-card-back ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+/* TABELLE DATI */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px #ffccd5; 
+}
+
+table th {
+    background-color: #E67E22;
+    color: white;
+    padding: 15px;
+}
+
+table td {
+    background-color: #f5ca7f;
+    padding: 15px;
+    border-bottom: 1px solid #ffe4e1;
+    text-align: center;
+}
+
+/* PIÈ DI PAGINA (FOOTER) */
+footer {
+    background-color: #D35400;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+}

@@ -1,0 +1,294 @@
+/* STILI GENERALI DEL CORPO PAGINA */
+body {
+    background-color: #FFF5E6; 
+    font-family: 'Fredoka', sans-serif;
+    color: #4A148C; 
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* SEZIONE MENU NAVIGAZIONE */
+div#navigation {
+    background-color: #6A1B9A; /* Viola intenso */
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #4A148C; /* Bordo viola più scuro */
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* STATI DEL MENU (HOVER E LINK ATTIVO) */
+#navigation li a:hover {
+    background-color: #BA68C8; 
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+#navigation li#activelink a {
+    background-color: #ffffff;
+    color: #6A1B9A;
+    border-bottom: 4px solid #4A148C; 
+}
+
+/* STILI DEI TITOLI */
+h2 {
+    color: #4A148C; /* Titoli viola scuro profondo */
+}
+
+/* SEZIONE HEADER (TESTATA) */
+#header {
+    background: linear-gradient(135deg, #4A148C 0%, #7B1FA2 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #E1BEE7;
+}
+
+#header h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 55px;
+    color: #a463f2; 
+    text-shadow: 2px 2px 5px rgba(255, 107, 107, 0.4);
+}
+
+#header h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;             
+    color: #a463f2;               
+    font-weight: 400;           
+    margin-top: -10px;           
+    opacity: 0.9;                 
+    text-transform: italic;      
+    letter-spacing: 1px;         
+}
+
+section h2 {
+    color: #ca5cd6;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#header p {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* CONTENUTO INTERNO DELL'HEADER E LOGO */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra il blocco titolo + immagine */
+    gap: 40px;               /* Spazio tra il testo e lo scoiattolo */
+    padding: 20px;
+}
+
+.header-logo {
+    width: 160px;            /* Prova 100px per rimpicciolire, 200px per ingrandire */
+    height: auto;
+    order: 2;                /* Lo sposta a destra del testo */
+    filter: drop-shadow(5px 5px 10px rgba(160, 64, 0, 0.4));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);   /* Si ingrandisce leggermente se ci passi sopra */
+    filter: drop-shadow(8px 8px 15px rgba(160, 64, 0, 0.6));
+}
+
+.header-text {
+    order: 1;                /* Forza il testo a stare a sinistra */
+}
+
+/* SEZIONE INDICE DELLA PAGINA */
+.page-index {
+    background-color: #F3E5F5;    /* Sfondo lilla chiarissimo */
+    border: 3px dashed #BA68C8;   /* Tratteggio lavanda vivace */
+    padding: 25px;
+    margin: 30px auto;
+    width: 65%;
+    border-radius: 50px;          /* Più arrotondato per l'effetto nuvola */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(106, 27, 154, 0.15); 
+}
+
+.page-index h3 {
+    color: #6A1B9A;               
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.page-index ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.page-index li a {
+    text-decoration: none;
+    color: #6A1B9A;               
+    font-weight: bold;
+    padding: 8px 18px;
+    border: 2px solid #CE93D8;    
+    border-radius: 25px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.page-index li a:hover {
+    background-color: #CE93D8;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* SEZIONI DI CONTENUTO PRINCIPALE */
+section {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 40px;
+    border: 2px solid #E1BEE7;    
+    box-shadow: 0 5px 15px rgba(106, 27, 154, 0.05);
+}
+
+/* STILI IMMAGINI ANIMALI E CONTENUTO */
+.animal-img {
+    display: block;
+    margin-left: auto;      
+    margin-right: auto;     
+    width: 600px;           
+    height: auto;
+    border: 8px solid #F3E5F5;   
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(156, 39, 176, 0.2); 
+}
+
+#content {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* SFONDO DECORATIVO PERSONALIZZATO */
+#content::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../immagini/hmp.png'); 
+    background-size: 100px; 
+    background-repeat: repeat; 
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none; 
+}
+
+#content section {
+    position: relative;
+    z-index: 1;
+}
+
+#content section a {
+    color: #9C27B0;               
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#content section a:hover {
+    text-decoration: underline;
+}
+
+/* SEZIONE DETTAGLI A SCOMPARSA (ACCORDION) */
+details {
+    background-color: #F3E5F5;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #CE93D8;
+    transition: all 0.3s;
+}
+
+details[open] {
+    background-color: #E1BEE7;
+    border: 1px solid #4A148C;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    list-style: none; /* Rimuove la freccetta standard */
+}
+
+summary::before {
+    content: "✨ ";
+}
+
+details p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #311B92;
+}
+
+/* STILI DELLE TABELLE DATI */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px #E1BEE7; /* Simula bordo arrotondato lilla */
+}
+
+table th {
+    background-color: #9C27B0; 
+    color: white;
+    padding: 15px;
+}
+
+table td {
+    background-color: #c08cf5;
+    padding: 15px;
+    border-bottom: 1px solid #F3E5F5;
+    text-align: center;
+}
+
+/* SEZIONE FOOTER (PIÈ DI PAGINA) */
+#footer {
+    background-color: #6A1B9A; 
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+}
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4A148C;
+    color: white;
+    margin-top: 40px;
+}

@@ -1,0 +1,246 @@
+/* STILI GENERALI DEL CORPO PAGINA */
+body {
+    background-color: #f5dada; 
+    font-family: 'Fredoka', sans-serif;
+    color: #880e4f; 
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* SEZIONE MENU NAVIGAZIONE (ROSA) */
+#navigation {
+    background-color: #ffb6c1; 
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #ff8fa3;
+}
+
+#navigation ul {
+    display: flex;             
+    justify-content: center;   
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+}
+
+#navigation li a {
+    display: block;            
+    padding: 15px 25px;        
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: all 0.3s ease; 
+}
+
+/* STATI DEL MENU (HOVER E LINK ATTIVO) */
+#navigation li a:hover {
+    background-color: #ff8fa3; 
+    color: #fff;
+    transform: translateY(-2px); 
+}
+
+#navigation li#activelink a {
+    background-color: #ffffff;
+    color: #ff6b81;
+    border-bottom: 4px solid #ff4757; 
+}
+}
+
+/* SEZIONE HEADER (TESTATA) */
+div#header {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0); 
+    border-bottom: 4px solid #ff9a9e;
+}
+
+#header h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 55px;
+    color: #ffffff; 
+    text-shadow: 2px 2px 5px rgba(255, 107, 107, 0.4);
+}
+
+#header h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 22px;               
+    color: #ffffff;               
+    font-weight: 400;             
+    margin-top: -10px;             
+    opacity: 0.9;                 
+    text-transform: italic;       
+    letter-spacing: 1px;          
+}
+
+section h2 {
+    color: #ff6b81;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#header p {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* CONTENUTO HEADER E LOGO */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 40px;               
+    padding: 20px;
+}
+
+.header-logo {
+    width: 140px;                 
+    height: auto;
+    order: 2;                 
+    
+    filter: drop-shadow(5px 5px 10px rgba(255, 107, 107, 0.3));
+    
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);   
+}
+
+.header-text {
+    order: 1;                 
+}
+
+/* SEZIONE INDICE DELLA PAGINA (NUVOLETTA) */
+.page-index {
+    background: white;
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 30px;
+    border: 2px dashed #ff8fa3; 
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
+}
+
+.page-index h3 {
+    color: #ff6b81;
+    margin-bottom: 15px;
+}
+
+.page-index ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.page-index li a {
+    text-decoration: none;
+    color: #a94442; 
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 2px solid #ffccd5; 
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: inline-block; 
+    margin: 5px;
+}
+
+.page-index li a:hover {
+    background-color: #ff8fa3; 
+    color: white;
+    border-color: #ff8fa3;
+}
+
+/* SEZIONI DI CONTENUTO PRINCIPALE */
+section {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 40px;
+    border: 1px solid #ffe4e1;
+}
+
+section h2 {
+    color: #ff6b81;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* STILI IMMAGINI ANIMALI E OMBRE */
+.animal-img {
+    display: block;
+    margin-left: auto;      
+    margin-right: auto;     
+    width: 500px;           
+    height: auto;
+    border: 8px solid #fff0f5;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(255, 182, 193, 0.3);
+}
+
+/* SFONDO DECORATIVO PERSONALIZZATO (#CONTENT) */
+#content {
+    position: relative;
+    overflow: hidden; 
+}
+
+#content::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../immagini/hmp.png'); 
+    background-size: 100px; 
+    background-repeat: repeat; 
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none; 
+}
+
+#content section {
+    position: relative;
+    z-index: 1;
+}
+
+/* STILI DELLE TABELLE DATI */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px #ffccd5; 
+}
+
+table th {
+    background-color: #ffb6c1;
+    color: white;
+    padding: 15px;
+}
+
+table td {
+    background-color: #f0c7ce;
+    padding: 15px;
+    border-bottom: 1px solid #ffe4e1;
+    text-align: center;
+}
+
+/* SEZIONE FOOTER (PIÈ DI PAGINA) */
+#footer {
+    background-color: #ff8fa3;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+}

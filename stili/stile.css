@@ -1,0 +1,267 @@
+/* --- SEZIONE HEADER (TESTATA) --- */
+div#header {
+    background-color: YellowGreen;
+}
+
+.header-text h1 {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 50px;
+    color: #2e4d2e;
+    margin: 0;
+    /* text-shadow: Crea un'ombra leggera sotto il titolo per staccarlo dallo sfondo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-text p {
+    font-family: 'Fredoka', sans-serif;
+    font-style: italic;
+    color: darkblue;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Gestione del layout flessibile nell'header (testo + logo) */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    gap: 30px;
+    padding: 20px;
+}
+
+.header-logo {
+    width: 180px;
+    height: auto;
+    /* order: 2 sposta l'immagine a destra del testo anche se nel codice HTML appare prima */
+    order: 2; 
+    /* filter: drop-shadow crea un'ombra che segue perfettamente i bordi del logo */
+    filter: drop-shadow(5px 5px 8px rgba(0,0,0,0.2));
+}
+
+div#header p{
+    font-style:italic;
+    color:#2a572a;
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-left:2em;
+    margin-right:10em;
+    padding-top:1em;
+    padding-left:10em;
+    padding-bottom:1em;
+    padding-right:1em;
+    font-size:25px;
+}
+
+/* --- SEZIONE NAVIGAZIONE (MENU A SCHEDE) --- */
+div#navigation {
+    background-color: #32cd32; 
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #228b22;
+}
+
+div#navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px; 
+}
+
+div#navigation li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ffffff;    /* Sfondo bianco stile "scheda" */
+    color: #2e4d2e;               
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 8px 8px 0 0;   /* Arrotonda solo gli angoli superiori */
+    border-bottom: 4px solid #006400; /* Barretta decorativa inferiore */
+    transition: all 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse sui tasti del menu */
+div#navigation li a:hover {
+    background-color: #f0f0f0;    
+    color: #3cb371;               
+    border-bottom-color: #3cb371; 
+    /* translateY: fa saltare il tasto verso l'alto di 3 pixel */
+    transform: translateY(-3px);  
+}
+
+#navigation li#activelink a {
+    background-color: #ffffff;
+    color: #2e4d2e;
+    border-bottom: 4px solid #006400;
+}
+
+#navigation li#activelink a:hover {
+    background-color: #f0f0f0;    
+    color: #3cb371;               
+    border-bottom-color: #3cb371; 
+    transform: translateY(-3px);  
+}
+
+/* --- CONTENUTO PRINCIPALE E SFONDO REALE --- */
+div#content{
+    position: relative;
+    background-color: #70cd66; 
+    overflow: hidden; /* Fondamentale per non far uscire lo sfondo ::before dai bordi */
+}
+
+/* EFFETTO SFONDO CRICETINI (PATTERN) */
+#content::before {
+    content: ""; /* Necessario per attivare lo pseudo-elemento */
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../immagini/hmp.png'); 
+    background-size: 100px; /* Dimensione delle icone ripetute */
+    background-repeat: repeat; /* Clona l'immagine in tutte le direzioni */
+    opacity: 0.1; /* Rende lo sfondo quasi invisibile (10% di opacità) */
+    z-index: 0; /* Lo tiene dietro a tutto il testo */
+}
+
+#content section {
+    position: relative;
+    z-index: 1; /* Porta il testo sopra lo sfondo ::before */
+}
+
+/* Reset forzato per i link dentro le sezioni (per non farli sembrare bottoni del menu) */
+#content section a {
+    background-color: transparent !important; 
+    border: none !important;                  
+    padding: 0 !important;                     
+    display: inline !important;                
+    color: #0000EE !important;                 
+    text-decoration: none !important;     
+    text-transform: none !important;           
+    font-weight: normal !important;            
+    box-shadow: none !important;               
+}
+
+#content section a:hover {
+    color: #ff4757 !important;
+    background-color: transparent !important;
+    transform: none !important;
+}
+
+/* --- TITOLI DEGLI ANIMALI E DECORAZIONI --- */
+.animal-title-big {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: #2e4d2e; 
+    margin-left: 50px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    display: block; 
+}
+
+/* Linea decorativa verde sotto il titolo dell'animale */
+.animal-title-big::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #32cd32;   
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+/* --- EFFETTO EMOJI ANIMATA --- */
+.emoji-grande {
+    font-size: 40px !important;    
+    display: inline-block;         
+    vertical-align: middle;        
+    transition: transform 0.3s;    
+}
+
+.emoji-grande:hover {
+    /* Ingrandisce l'emoji e la ruota di 10 gradi contemporaneamente */
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* --- PARAGRAFI E LISTE NEL CONTENUTO --- */
+div#content p{
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-right:50px;
+    padding-top:1em;
+    padding-left:2em;
+    padding-bottom:1em;
+    padding-right:1em;
+    font-size:20px;
+    margin-left:50px;
+    font-family:Verdana;
+    color: #2e4d2e;
+}
+
+div#content ul{
+    margin-right:50px;
+    font-size:20px;
+    margin-left:50px;
+    font-family:Verdana;
+    color: #2e4d2e;
+}
+
+div#content table{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* --- SEZIONE FOTO + DESCRIZIONE (LAYOUT AVANZATO) --- */
+.animal-info {
+    display: flex !important;       
+    flex-direction: row !important; /* Mette foto e testo uno di fianco all'altro */
+    flex-wrap: nowrap !important;   
+    align-items: flex-start;        
+    gap: 30px;                      
+    margin: 40px auto;
+    max-width: 100%;                
+    width: 95%;                     
+}
+
+.animal-img {
+    width: 300px;              
+    height: auto;
+    /* flex-shrink: 0 impedisce all'immagine di schiacciarsi se il testo è troppo lungo */
+    flex-shrink: 0;            
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: 5px solid white;
+}
+
+/* Il blocco di testo bianco di fianco alla foto */
+.text-content {
+    flex: 1; /* Occupa tutto lo spazio rimanente accanto alla foto */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    border-left: 8px solid #2e4d2e; /* Barretta verde scura laterale */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+
+.text-content p {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    text-align: left; 
+    color: #2e4d2e;          
+}
+
+/* SEZIONE FOOTER */
+#footer {
+    background-color: #1f8f23;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+}
+
+/* FIX PER I LINK: Li porta in primo piano sopra lo sfondo decorativo */
+a {
+    position: relative;
+    z-index: 999;
+}
